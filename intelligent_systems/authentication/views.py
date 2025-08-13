@@ -33,7 +33,7 @@ def signin(request):
         if user is not None:
             login(request, user)
             request.session['user_name'] = user.username
-            return redirect('/modules/')
+            return redirect('/modules/migration/')
         else:
             messages.error(request, 'Usuario o contraseña incorrectos')
             return redirect('signin')
