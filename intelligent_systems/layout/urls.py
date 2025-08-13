@@ -6,7 +6,7 @@ from analisis_eficiencia import views as analisis_eficiencia_views
 from NEUTRO import views as neutro_views
 
 urlpatterns=[
-    path('', lambda request: redirect('migration/'), name='index'),
+    path('', views.homeLayout, name='index'),
     path('migration/', migration_excel_views.migration_Excel_View, name='migration_excel'),
     path('analisis-eficiencia/', analisis_eficiencia_views.analisis_Eficiencia_View, name='analisis_eficiencia'),
     path('docentes-asignados/', analisis_eficiencia_views.lista_docentes_asignados_View, name='docentes_asignados'),
